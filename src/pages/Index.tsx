@@ -247,8 +247,13 @@ export default function Index() {
             <img
               src={scrolled ? LOGO_COLOR : LOGO_WHITE}
               alt="Центр св. Киприана"
-              className="h-14 w-auto transition-all duration-300"
-              style={{ filter: scrolled ? "none" : "drop-shadow(0 1px 4px rgba(0,0,0,0.18))" }}
+              className="transition-all duration-300 object-contain"
+              style={{
+                height: "72px",
+                width: "auto",
+                maxWidth: "220px",
+                filter: scrolled ? "none" : "drop-shadow(0 1px 4px rgba(0,0,0,0.18))",
+              }}
             />
           </a>
 
@@ -292,8 +297,8 @@ export default function Index() {
             <img
               src={LOGO_WHITE}
               alt="Логотип"
-              className="h-28 w-auto mb-8 animate-fade-in"
-              style={{ animationDelay: "0.1s", opacity: 0, filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.25))" }}
+              className="mb-8 animate-fade-in object-contain"
+              style={{ height: "160px", width: "auto", maxWidth: "320px", animationDelay: "0.1s", opacity: 0, filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.25))" }}
             />
             <p className="font-golos text-xs tracking-widest uppercase mb-6 animate-fade-in" style={{ color: "var(--c-gold)", animationDelay: "0.2s", opacity: 0 }}>
               Духовно-просветительский центр
@@ -661,7 +666,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center gap-4">
-              <img src={LOGO_WHITE} alt="Логотип" className="h-16 w-auto opacity-90" />
+              <img src={LOGO_WHITE} alt="Логотип" className="opacity-90 object-contain" style={{ height: "80px", width: "auto", maxWidth: "160px" }} />
               <div className="text-center md:text-left">
                 <p className="font-cormorant text-xl font-light text-white mb-1">Центр имени святителя Киприана</p>
                 <p className="font-golos text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>при храме Троицы Живоначальной</p>
