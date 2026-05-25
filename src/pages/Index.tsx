@@ -10,7 +10,6 @@ const galleryImages = [
   { src: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/a79a4738-2305-4454-b744-61e51404bcea.jpg", caption: "Литургия — поёт хор воскресной школы" },
   { src: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/d8f8dc6f-bf8f-47b8-8fc4-38509748628c.jpg", caption: "Экскурсия" },
   { src: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/5e096c0e-f65a-4b9e-99b6-822e27dc57e7.jpg", caption: "Столярная мастерская" },
-  { src: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/ca212f9c-0698-47c6-8045-5277242a3494.png", caption: "Храм Троицы Живоначальной" },
 ];
 
 export default function Index() {
