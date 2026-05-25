@@ -2,15 +2,12 @@ import { useState } from "react";
 import Header from "@/components/center/Header";
 import Sections from "@/components/center/Sections";
 import RegistrationModal from "@/components/center/RegistrationModal";
-import { HERO_IMAGE, SCHOOL_IMAGE, ICON_IMAGE } from "@/components/center/shared";
-
 const galleryImages = [
-  { src: HERO_IMAGE,   caption: "Храм Троицы Живоначальной" },
-  { src: SCHOOL_IMAGE, caption: "Занятия воскресной школы" },
-  { src: ICON_IMAGE,   caption: "Мастерская иконописи" },
-  { src: HERO_IMAGE,   caption: "Территория центра" },
-  { src: SCHOOL_IMAGE, caption: "Праздничное мероприятие" },
-  { src: ICON_IMAGE,   caption: "Мастер-класс по росписи" },
+  { src: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/5e096c0e-f65a-4b9e-99b6-822e27dc57e7.jpg", caption: "Столярная мастерская" },
+  { src: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/7ca56ce6-065b-499d-900d-482fc46d6e34.jpg", caption: "Воскресная школа" },
+  { src: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/d7648cab-f376-478f-b551-a09402c9de21.jpg", caption: "Занятие на улице" },
+  { src: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/bc15a8b0-c472-4578-baa0-b4facd764c6c.jpg", caption: "Урок «Хлеб насущный»" },
+  { src: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/a79a4738-2305-4454-b744-61e51404bcea.jpg", caption: "Паломничество" },
 ];
 
 export default function Index() {
