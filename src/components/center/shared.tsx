@@ -96,16 +96,21 @@ export function AnimSection({ children, className = "" }: { children: React.Reac
 
 export function Ornament({ flip = false, opacity = 1 }: { flip?: boolean; opacity?: number }) {
   return (
-    <div className="w-full pointer-events-none flex items-center justify-center py-0" style={{ opacity }}>
+    <div
+      className="w-full pointer-events-none flex items-center justify-center overflow-hidden"
+      style={{ opacity, height: "80px" }}
+    >
       <img
         src={ORNAMENT_URL}
         alt=""
         style={{
-          height: "120px",
-          width: "100%",
-          maxWidth: "1200px",
-          objectFit: "contain",
+          height: "180px",
+          width: "auto",
+          minWidth: "100%",
+          objectFit: "cover",
+          objectPosition: "top",
           transform: flip ? "scaleY(-1)" : "none",
+          flexShrink: 0,
         }}
       />
     </div>
