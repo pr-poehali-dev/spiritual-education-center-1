@@ -96,23 +96,42 @@ export function AnimSection({ children, className = "" }: { children: React.Reac
 
 export function Ornament({ flip = false, opacity = 1 }: { flip?: boolean; opacity?: number }) {
   return (
-    <div
-      className="w-full pointer-events-none flex items-center justify-center overflow-hidden"
-      style={{ opacity, height: "110px" }}
-    >
-      <img
-        src={ORNAMENT_URL}
-        alt=""
-        style={{
-          height: "180px",
-          width: "auto",
-          minWidth: "100%",
-          objectFit: "cover",
-          objectPosition: "top",
-          transform: flip ? "scaleY(-1)" : "none",
-          flexShrink: 0,
-        }}
-      />
+    <div className="w-full pointer-events-none flex items-center justify-center py-6" style={{ opacity }}>
+      <div className="flex items-center w-full max-w-4xl px-8 gap-0">
+
+        {/* Левая часть */}
+        <div className="flex-1 flex items-center gap-2">
+          <div className="flex-1" style={{ height: "1px", background: "linear-gradient(to right, transparent, var(--c-gold))" }} />
+          <div style={{ width: "4px", height: "4px", borderRadius: "50%", backgroundColor: "var(--c-gold)", opacity: 0.7 }} />
+          <div style={{ width: "6px", height: "6px", transform: "rotate(45deg)", border: "1px solid var(--c-gold)" }} />
+          <div style={{ width: "4px", height: "4px", borderRadius: "50%", backgroundColor: "var(--c-gold)", opacity: 0.7 }} />
+          <div style={{ width: "6px", height: "6px", transform: "rotate(45deg)", border: "1px solid var(--c-gold)" }} />
+          <div style={{ width: "4px", height: "4px", borderRadius: "50%", backgroundColor: "var(--c-gold)", opacity: 0.7 }} />
+        </div>
+
+        {/* Центральный крест */}
+        <div className="flex-shrink-0 flex items-center justify-center mx-4" style={{ width: "32px", height: "32px", position: "relative" }}>
+          {/* вертикальная линия */}
+          <div style={{ position: "absolute", width: "1px", height: "32px", backgroundColor: "var(--c-gold)" }} />
+          {/* горизонтальная линия */}
+          <div style={{ position: "absolute", width: "32px", height: "1px", backgroundColor: "var(--c-gold)", top: "35%" }} />
+          {/* верхняя перекладина */}
+          <div style={{ position: "absolute", width: "16px", height: "1px", backgroundColor: "var(--c-gold)", top: "18%" }} />
+          {/* точка сверху */}
+          <div style={{ position: "absolute", width: "5px", height: "5px", borderRadius: "50%", backgroundColor: "var(--c-gold)", top: 0, left: "50%", transform: "translateX(-50%)" }} />
+        </div>
+
+        {/* Правая часть */}
+        <div className="flex-1 flex items-center gap-2">
+          <div style={{ width: "4px", height: "4px", borderRadius: "50%", backgroundColor: "var(--c-gold)", opacity: 0.7 }} />
+          <div style={{ width: "6px", height: "6px", transform: "rotate(45deg)", border: "1px solid var(--c-gold)" }} />
+          <div style={{ width: "4px", height: "4px", borderRadius: "50%", backgroundColor: "var(--c-gold)", opacity: 0.7 }} />
+          <div style={{ width: "6px", height: "6px", transform: "rotate(45deg)", border: "1px solid var(--c-gold)" }} />
+          <div style={{ width: "4px", height: "4px", borderRadius: "50%", backgroundColor: "var(--c-gold)", opacity: 0.7 }} />
+          <div className="flex-1" style={{ height: "1px", background: "linear-gradient(to left, transparent, var(--c-gold))" }} />
+        </div>
+
+      </div>
     </div>
   );
 }
