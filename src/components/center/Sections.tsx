@@ -253,7 +253,7 @@ export default function Sections({ onRegister, galleryImages, activeGallery, set
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <AnimSection className="text-center mb-16">
             <p className="font-golos text-xs tracking-widest uppercase mb-4" style={{ color: "var(--c-gold)" }}>Галерея</p>
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light" style={{ color: "var(--c-green-dark)" }}>Жизнь центра</h2>
+            <h2 className="font-cormorant text-4xl md:text-5xl font-light" style={{ color: "var(--c-green-dark)" }}>Фотогалерея</h2>
           </AnimSection>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {galleryImages.map((img, i) => (
