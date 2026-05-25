@@ -570,7 +570,7 @@ export default function Index() {
           </AnimSection>
           <div className="grid lg:grid-cols-3 gap-8">
             {[
-              { icon: "MapPin", title: "Адрес", lines: ["ул. Примерная, д. 1", "Москва, 101000"] },
+              { icon: "MapPin", title: "Адрес", lines: ["ул. Мосфильмовская, 18А", "Москва"] },
               { icon: "Phone", title: "Телефон", lines: ["+7 (495) 000-00-00", "Пн–Пт: 9:00–20:00"] },
               { icon: "Mail", title: "Email", lines: ["info@kiprian-center.ru", "Отвечаем в течение дня"] },
             ].map(c => (
@@ -588,11 +588,16 @@ export default function Index() {
             ))}
           </div>
           <AnimSection className="mt-8">
-            <div className="w-full flex items-center justify-center rounded-sm" style={{ height: "300px", backgroundColor: "var(--c-green-pale)", border: "1px solid var(--c-beige-dark)" }}>
-              <div className="text-center">
-                <Icon name="MapPin" size={32} style={{ color: "var(--c-green-mid)" }} className="mx-auto mb-3" />
-                <p className="font-golos text-sm" style={{ color: "var(--c-text-muted)" }}>Карта будет добавлена</p>
-              </div>
+            <div className="w-full overflow-hidden rounded-sm" style={{ height: "360px", border: "1px solid var(--c-beige-dark)" }}>
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=37.527%2C55.726&z=16&pt=37.527,55.726,pm2gnm~37.527,55.726&text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C+%D0%9C%D0%BE%D1%81%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+18%D0%90"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                title="Карта"
+                style={{ border: 0 }}
+                allowFullScreen
+              />
             </div>
           </AnimSection>
         </div>
