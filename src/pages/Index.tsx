@@ -242,28 +242,28 @@ export default function Index() {
           boxShadow: scrolled ? "0 1px 20px rgba(26,61,43,0.06)" : "none",
         }}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-3">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-3 flex items-center justify-between gap-8">
+          <a href="#" className="flex-shrink-0">
             <img
               src={scrolled ? LOGO_COLOR : LOGO_WHITE}
               alt="Центр св. Киприана"
               className="transition-all duration-300 object-contain"
               style={{
-                height: "72px",
+                height: "52px",
                 width: "auto",
-                maxWidth: "220px",
+                maxWidth: "160px",
                 filter: scrolled ? "none" : "drop-shadow(0 1px 4px rgba(0,0,0,0.18))",
               }}
             />
           </a>
 
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-5 flex-1 justify-center">
             {NAV_ITEMS.map(item => (
               <a key={item.href} href={item.href} className="nav-link">{item.label}</a>
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center flex-shrink-0">
             <button onClick={() => setModalOpen(true)} className="btn-primary text-sm">Записаться</button>
           </div>
 
