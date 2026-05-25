@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
+const LOGO_COLOR = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/ba8bcf18-ec80-4704-932a-b1cbc43c89f7.png";
+const LOGO_WHITE = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/45fbc628-6f01-464e-b5c2-94c0c700cecd.png";
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/files/68c6f3d6-7955-444e-8594-cf5a045c0d2a.jpg";
 const SCHOOL_IMAGE = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/files/00825c27-7423-417c-9077-b525bd268d20.jpg";
 const ICON_IMAGE = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/files/8adc616d-6f11-4735-bead-e32309f81ac4.jpg";
@@ -226,13 +228,12 @@ export default function Index() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
           <a href="#" className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "var(--c-green-dark)" }}>
-              <span className="font-cormorant text-white text-sm font-medium">К</span>
-            </div>
-            <div className="hidden sm:block">
-              <p className="font-cormorant text-sm leading-tight font-medium" style={{ color: "var(--c-green-dark)" }}>Центр св. Киприана</p>
-              <p className="font-golos text-xs" style={{ color: "var(--c-text-muted)" }}>при храме Троицы Живоначальной</p>
-            </div>
+            <img
+              src={scrolled ? LOGO_COLOR : LOGO_WHITE}
+              alt="Центр св. Киприана"
+              className="h-14 w-auto transition-all duration-300"
+              style={{ filter: scrolled ? "none" : "drop-shadow(0 1px 4px rgba(0,0,0,0.18))" }}
+            />
           </a>
 
           <nav className="hidden lg:flex items-center gap-7">
@@ -272,6 +273,12 @@ export default function Index() {
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-12 w-full">
           <div className="max-w-3xl">
+            <img
+              src={LOGO_WHITE}
+              alt="Логотип"
+              className="h-28 w-auto mb-8 animate-fade-in"
+              style={{ animationDelay: "0.1s", opacity: 0, filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.25))" }}
+            />
             <p className="font-golos text-xs tracking-widest uppercase mb-6 animate-fade-in" style={{ color: "var(--c-gold)", animationDelay: "0.2s", opacity: 0 }}>
               Духовно-просветительский центр
             </p>
@@ -593,9 +600,12 @@ export default function Index() {
       <footer style={{ backgroundColor: "var(--c-green-dark)" }} className="py-12">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="text-center md:text-left">
-              <p className="font-cormorant text-xl font-light text-white mb-1">Центр имени святителя Киприана</p>
-              <p className="font-golos text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>при храме Троицы Живоначальной</p>
+            <div className="flex items-center gap-4">
+              <img src={LOGO_WHITE} alt="Логотип" className="h-16 w-auto opacity-90" />
+              <div className="text-center md:text-left">
+                <p className="font-cormorant text-xl font-light text-white mb-1">Центр имени святителя Киприана</p>
+                <p className="font-golos text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>при храме Троицы Живоначальной</p>
+              </div>
             </div>
             <div className="flex flex-wrap justify-center gap-6">
               {NAV_ITEMS.slice(0, 5).map(item => (
