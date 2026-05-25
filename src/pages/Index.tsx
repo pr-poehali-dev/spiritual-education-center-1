@@ -14,8 +14,24 @@ const NAV_ITEMS = [
   { label: "Спорт", href: "#sport" },
   { label: "Мероприятия", href: "#events" },
   { label: "Галерея", href: "#gallery" },
+  { label: "Педагоги", href: "#teachers" },
   { label: "Расписание", href: "#schedule" },
   { label: "Контакты", href: "#contacts" },
+];
+
+const TEACHERS = [
+  { name: "Иерей Иоанн Новиков", role: "Настоятель храма", subject: "Духовные беседы", icon: "Cross" },
+  { name: "Володин Лука Михайлович", role: "Педагог", subject: "Священное Писание. Новый Завет", icon: "BookOpen" },
+  { name: "Копысов Дмитрий Александрович", role: "Педагог", subject: "Урок «Хлеб насущный»", icon: "Wheat" },
+  { name: "Наталья Васильевна Антонова", role: "Педагог", subject: "Закон Божий, урок «Хлеб насущный»", icon: "BookMarked" },
+  { name: "Елена Викторовна Тросникова", role: "Педагог", subject: "Рассказы о святых", icon: "ScrollText" },
+  { name: "Людмила Павловна Медведьева", role: "Педагог", subject: "Язык православного богослужения", icon: "Church" },
+  { name: "Мария Анатольевна Пузина", role: "Педагог", subject: "Церковнославянский язык", icon: "Languages" },
+  { name: "Матрона Дмитровна Патрушева", role: "Педагог", subject: "Церковное пение", icon: "Music" },
+  { name: "Юлия Анатольевна Харитонова", role: "Педагог", subject: "Экскурсии и паломничество", icon: "MapPin" },
+  { name: "Илюхин Владимир", role: "Мастер", subject: "Столярная мастерская", icon: "Hammer" },
+  { name: "Кибец Вероника Вадимовна", role: "Педагог", subject: "Живопись", icon: "Paintbrush" },
+  { name: "Тряпицина Анна Андреевна", role: "Педагог", subject: "Швейное мастерство", icon: "Scissors" },
 ];
 
 const DIRECTIONS = [
@@ -543,6 +559,43 @@ export default function Index() {
           <AnimSection className="mt-12 text-center">
             <button onClick={() => setModalOpen(true)} className="btn-primary">Записаться на занятие</button>
           </AnimSection>
+        </div>
+      </section>
+
+      {/* ── ПЕДАГОГИ ── */}
+      <section id="teachers" className="py-24" style={{ backgroundColor: "var(--c-green-pale)" }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <AnimSection className="text-center mb-16">
+            <p className="font-golos text-xs tracking-widest uppercase mb-4" style={{ color: "var(--c-gold)" }}>Преподаватели</p>
+            <h2 className="font-cormorant text-4xl md:text-5xl font-light" style={{ color: "var(--c-green-dark)" }}>Наши педагоги</h2>
+          </AnimSection>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {TEACHERS.map(t => (
+              <AnimSection key={t.name}>
+                <div className="bg-white rounded-sm card-hover flex flex-col overflow-hidden">
+                  {/* Место для фото */}
+                  <div className="relative flex items-center justify-center" style={{ height: "200px", backgroundColor: "var(--c-beige-dark)" }}>
+                    <div className="flex flex-col items-center gap-3 opacity-40">
+                      <Icon name="User" size={48} style={{ color: "var(--c-green-mid)" }} />
+                      <p className="font-golos text-xs" style={{ color: "var(--c-text-muted)" }}>Фото</p>
+                    </div>
+                    {/* Иконка направления */}
+                    <div className="absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: "var(--c-green-dark)" }}>
+                      <Icon name={t.icon} size={14} style={{ color: "var(--c-gold)" }} fallback="BookOpen" />
+                    </div>
+                  </div>
+                  {/* Контент */}
+                  <div className="p-5 flex flex-col flex-1">
+                    <p className="font-golos text-xs tracking-wider uppercase mb-1" style={{ color: "var(--c-gold)" }}>{t.role}</p>
+                    <h4 className="font-cormorant text-lg font-medium leading-snug mb-3" style={{ color: "var(--c-green-dark)" }}>{t.name}</h4>
+                    <div className="mt-auto pt-3" style={{ borderTop: "1px solid var(--c-beige-dark)" }}>
+                      <p className="font-golos text-xs leading-relaxed" style={{ color: "var(--c-text-muted)" }}>{t.subject}</p>
+                    </div>
+                  </div>
+                </div>
+              </AnimSection>
+            ))}
+          </div>
         </div>
       </section>
 
