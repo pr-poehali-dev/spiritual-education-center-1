@@ -268,7 +268,7 @@ export default function Index() {
             <img
               src={scrolled ? LOGO_COLOR : LOGO_WHITE}
               alt="Центр св. Киприана"
-              className="transition-all duration-300 object-contain"
+              className="transition-all duration-300 object-contain logo-animate"
               style={{
                 height: "52px",
                 width: "auto",
@@ -318,8 +318,8 @@ export default function Index() {
             <img
               src={LOGO_WHITE}
               alt="Логотип"
-              className="mb-8 animate-fade-in object-contain"
-              style={{ height: "160px", width: "auto", maxWidth: "320px", animationDelay: "0.1s", opacity: 0, filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.25))" }}
+              className="mb-8 object-contain logo-animate"
+              style={{ height: "160px", width: "auto", maxWidth: "320px", filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.25))" }}
             />
             <p className="font-golos text-xs tracking-widest uppercase mb-6 animate-fade-in" style={{ color: "var(--c-gold)", animationDelay: "0.2s", opacity: 0 }}>
               Духовно-просветительский центр
