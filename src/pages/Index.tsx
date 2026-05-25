@@ -3,6 +3,11 @@ import Icon from "@/components/ui/icon";
 
 const LOGO_COLOR = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/ba8bcf18-ec80-4704-932a-b1cbc43c89f7.png";
 const LOGO_WHITE = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/45fbc628-6f01-464e-b5c2-94c0c700cecd.png";
+
+// Слои логотипа для анимации
+const L_HANDS   = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/92c6fcab-f17e-4c84-ad59-dc6313e374ff.png"; // руки + икона
+const L_CIRCLES = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/48b4878a-4e9c-4f59-820d-2a4580fb175d.png"; // круги
+const L_TEXT    = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/ecf7b6ca-0c71-4696-b19d-99d4ad9c12f0.png"; // надпись по кругу
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/files/68c6f3d6-7955-444e-8594-cf5a045c0d2a.jpg";
 const SCHOOL_IMAGE = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/files/00825c27-7423-417c-9077-b525bd268d20.jpg";
 const ICON_IMAGE = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/files/8adc616d-6f11-4735-bead-e32309f81ac4.jpg";
@@ -315,12 +320,15 @@ export default function Index() {
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-12 w-full">
           <div className="max-w-3xl">
-            <img
-              src={LOGO_WHITE}
-              alt="Логотип"
-              className="mb-8 object-contain logo-animate"
-              style={{ height: "160px", width: "auto", maxWidth: "320px", filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.25))" }}
-            />
+            {/* Анимированный логотип — слои по очереди */}
+            <div className="relative mb-8" style={{ width: "220px", height: "220px" }}>
+              {/* 1. Руки снизу вверх */}
+              <img src={L_HANDS} alt="" className="absolute inset-0 w-full h-full object-contain logo-layer-hands" />
+              {/* 2. Круги fade-in */}
+              <img src={L_CIRCLES} alt="" className="absolute inset-0 w-full h-full object-contain logo-layer-circles" />
+              {/* 3. Надпись по кругу — clip-path разворачивается */}
+              <img src={L_TEXT} alt="" className="absolute inset-0 w-full h-full object-contain logo-layer-text" />
+            </div>
             <p className="font-golos text-xs tracking-widest uppercase mb-6 animate-fade-in" style={{ color: "var(--c-gold)", animationDelay: "0.2s", opacity: 0 }}>
               Духовно-просветительский центр
             </p>

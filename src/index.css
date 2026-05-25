@@ -225,27 +225,81 @@
   }
 }
 
-/* Logo animation */
+/* Logo animation — шапка */
 @keyframes logo-appear {
   0% {
     opacity: 0;
-    transform: scale(0.72) rotate(-6deg);
-    filter: blur(6px);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1.05) rotate(1deg);
-    filter: blur(0);
+    transform: scale(0.82);
+    filter: blur(4px);
   }
   100% {
     opacity: 1;
-    transform: scale(1) rotate(0deg);
+    transform: scale(1);
     filter: blur(0);
   }
 }
 .logo-animate {
-  animation: logo-appear 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-  animation-delay: 0.15s;
+  animation: logo-appear 0.7s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+/* Слой 1: руки — выезжают снизу */
+@keyframes hands-in {
+  0% {
+    opacity: 0;
+    transform: translateY(32px) scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.logo-layer-hands {
+  animation: hands-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+/* Слой 2: круги — fade in */
+@keyframes circles-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.logo-layer-circles {
+  animation: circles-in 0.7s ease forwards;
+  animation-delay: 0.75s;
+  opacity: 0;
+}
+
+/* Слой 3: надпись по кругу — разворачивается через clip-path */
+@keyframes text-arc-in {
+  0% {
+    opacity: 0;
+    clip-path: inset(50% 0% 0% 50%);
+  }
+  30% {
+    opacity: 1;
+    clip-path: inset(0% 0% 0% 50%);
+  }
+  65% {
+    opacity: 1;
+    clip-path: inset(0% 0% 0% 0%);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}
+.logo-layer-text {
+  animation: text-arc-in 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 1.3s;
   opacity: 0;
 }
 
