@@ -68,6 +68,27 @@ const EVENTS_LIST = [
   { date: "1 сентября", title: "День знаний", desc: "Молебен о начале учебного года, чаепитие, знакомство с программами центра", type: "Образование" },
 ];
 
+const ORNAMENT_URL = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/fb22308e-ee49-42a2-9697-8f204206dc67.png";
+
+function Ornament({ flip = false, opacity = 0.55 }: { flip?: boolean; opacity?: number }) {
+  return (
+    <div className="w-full overflow-hidden pointer-events-none" style={{ lineHeight: 0 }}>
+      <img
+        src={ORNAMENT_URL}
+        alt=""
+        className="w-full"
+        style={{
+          transform: flip ? "scaleY(-1)" : "none",
+          opacity,
+          maxHeight: "90px",
+          objectFit: "cover",
+          objectPosition: "top",
+        }}
+      />
+    </div>
+  );
+}
+
 function useIntersect(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -340,6 +361,8 @@ export default function Index() {
         </div>
       </section>
 
+      <Ornament flip opacity={0.4} />
+
       {/* ── О ЦЕНТРЕ ── */}
       <section id="about" className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -377,6 +400,8 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      <Ornament opacity={0.35} />
 
       {/* ── НАПРАВЛЕНИЯ ── */}
       <section id="directions" className="py-24" style={{ backgroundColor: "var(--c-green-pale)" }}>
@@ -535,6 +560,8 @@ export default function Index() {
         </div>
       </section>
 
+      <Ornament flip opacity={0.4} />
+
       {/* ── РАСПИСАНИЕ ── */}
       <section id="schedule" className="py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -566,6 +593,8 @@ export default function Index() {
           </AnimSection>
         </div>
       </section>
+
+      <Ornament opacity={0.35} />
 
       {/* ── ПЕДАГОГИ ── */}
       <section id="teachers" className="py-24" style={{ backgroundColor: "var(--c-green-pale)" }}>
