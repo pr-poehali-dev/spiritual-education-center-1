@@ -26,10 +26,10 @@ const DIRECTIONS = [
 ];
 
 const WORKSHOPS = [
-  { emoji: "🪚", title: "Столярное дело", desc: "Работа с деревом, создание изделий ручной работы, освоение традиционных техник" },
-  { emoji: "🎨", title: "Живопись и иконопись", desc: "Классическая живопись, акварель, основы иконописи в традиции православного искусства" },
-  { emoji: "🎵", title: "Музыка и хоровое пение", desc: "Обучение игре на инструментах, церковное пение, хоровая студия" },
-  { emoji: "🧵", title: "Швейное мастерство", desc: "Основы шитья, вышивка, рукоделие и традиционные народные ремёсла" },
+  { icon: "Hammer", title: "Столярное дело", desc: "Работа с деревом, создание изделий ручной работы, освоение традиционных техник" },
+  { icon: "Paintbrush", title: "Живопись и иконопись", desc: "Классическая живопись, акварель, основы иконописи в традиции православного искусства" },
+  { icon: "Music", title: "Музыка и хоровое пение", desc: "Обучение игре на инструментах, церковное пение, хоровая студия" },
+  { icon: "Scissors", title: "Швейное мастерство", desc: "Основы шитья, вышивка, рукоделие и традиционные народные ремёсла" },
 ];
 
 const SPORT = [
@@ -405,7 +405,9 @@ export default function Index() {
                     className="flex gap-5 p-6 bg-white card-hover rounded-sm group cursor-pointer"
                     onClick={() => setModalOpen(true)}
                   >
-                    <div className="text-3xl flex-shrink-0 mt-1">{w.emoji}</div>
+                    <div className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: "var(--c-green-pale)" }}>
+                      <Icon name={w.icon} size={20} style={{ color: "var(--c-green-mid)" }} />
+                    </div>
                     <div className="flex-1">
                       <h3 className="font-cormorant text-xl font-medium mb-2" style={{ color: "var(--c-green-dark)" }}>{w.title}</h3>
                       <p className="font-golos text-sm leading-relaxed" style={{ color: "var(--c-text-muted)" }}>{w.desc}</p>
