@@ -94,27 +94,20 @@ export function AnimSection({ children, className = "" }: { children: React.Reac
   );
 }
 
-export function Ornament({ flip = false, opacity = 0.5 }: { flip?: boolean; opacity?: number }) {
+export function Ornament({ flip = false, opacity = 0.75 }: { flip?: boolean; opacity?: number }) {
   return (
-    <div className="w-full pointer-events-none flex flex-col items-center py-2" style={{ opacity }}>
-      {/* тонкая линия */}
-      <div className="w-full" style={{ height: "1px", background: "linear-gradient(to right, transparent, var(--c-gold), transparent)" }} />
-      {/* орнамент по центру */}
-      <div className="relative flex items-center justify-center w-full" style={{ height: "72px" }}>
-        <img
-          src={ORNAMENT_URL}
-          alt=""
-          style={{
-            height: "72px",
-            width: "auto",
-            maxWidth: "min(640px, 80%)",
-            objectFit: "contain",
-            transform: flip ? "scaleY(-1)" : "none",
-          }}
-        />
-      </div>
-      {/* тонкая линия */}
-      <div className="w-full" style={{ height: "1px", background: "linear-gradient(to right, transparent, var(--c-gold), transparent)" }} />
+    <div className="w-full pointer-events-none flex items-center justify-center py-1" style={{ opacity }}>
+      <img
+        src={ORNAMENT_URL}
+        alt=""
+        style={{
+          height: "80px",
+          width: "100%",
+          maxWidth: "900px",
+          objectFit: "contain",
+          transform: flip ? "scaleY(-1)" : "none",
+        }}
+      />
     </div>
   );
 }
