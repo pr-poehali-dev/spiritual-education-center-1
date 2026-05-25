@@ -1,7 +1,7 @@
 import Icon from "@/components/ui/icon";
 import {
   AnimSection, Ornament,
-  LOGO_WHITE, L_HANDS, L_CIRCLES, L_TEXT,
+  LOGO_WHITE,
   HERO_IMAGE, SCHOOL_IMAGE, ICON_IMAGE,
   NAV_ITEMS, DIRECTIONS, WORKSHOPS, SPORT,
   SCHEDULE, EVENTS_LIST, TEACHERS,
@@ -29,11 +29,12 @@ export default function Sections({ onRegister, galleryImages, activeGallery, set
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-12 w-full">
           <div className="max-w-3xl">
-            <div className="relative mb-8" style={{ width: "220px", height: "220px" }}>
-              <img src={L_HANDS} alt="" className="absolute inset-0 w-full h-full object-contain logo-layer-hands" />
-              <img src={L_CIRCLES} alt="" className="absolute inset-0 w-full h-full object-contain logo-layer-circles" />
-              <img src={L_TEXT} alt="" className="absolute inset-0 w-full h-full object-contain logo-layer-text" />
-            </div>
+            <img
+              src={LOGO_WHITE}
+              alt="Логотип"
+              className="mb-8 object-contain logo-animate"
+              style={{ height: "200px", width: "auto", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.3))" }}
+            />
             <p className="font-golos text-xs tracking-widest uppercase mb-6 animate-fade-in" style={{ color: "var(--c-gold)", animationDelay: "0.2s", opacity: 0 }}>
               Духовно-просветительский центр
             </p>
