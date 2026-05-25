@@ -255,22 +255,48 @@ export default function Sections({ onRegister, galleryImages, activeGallery, set
             <p className="font-golos text-xs tracking-widest uppercase mb-4" style={{ color: "var(--c-gold)" }}>Галерея</p>
             <h2 className="font-cormorant text-4xl md:text-5xl font-light" style={{ color: "var(--c-green-dark)" }}>Фотогалерея</h2>
           </AnimSection>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {galleryImages.map((img, i) => (
-              <AnimSection key={i}>
-                <div
-                  className="relative overflow-hidden cursor-pointer group"
-                  style={{ aspectRatio: i === 0 || i === 3 ? "4/3" : "1/1" }}
-                  onClick={() => setActiveGallery(i)}
-                >
-                  <img src={img.src} alt={img.caption} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4" style={{ background: "linear-gradient(to top, rgba(13,30,18,0.7), transparent)" }}>
-                    <p className="font-golos text-sm text-white">{img.caption}</p>
+          {/* Ряд 1: большое фото + два маленьких */}
+          <AnimSection className="grid grid-cols-3 gap-3 mb-3">
+            {/* Большое — занимает 2 колонки */}
+            <div
+              className="col-span-2 relative overflow-hidden cursor-pointer group"
+              style={{ height: "420px" }}
+              onClick={() => setActiveGallery(0)}
+            >
+              <img src={galleryImages[0].src} alt={galleryImages[0].caption} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5" style={{ background: "linear-gradient(to top, rgba(13,30,18,0.7), transparent)" }}>
+                <p className="font-golos text-sm text-white">{galleryImages[0].caption}</p>
+              </div>
+            </div>
+            {/* Два маленьких справа */}
+            <div className="flex flex-col gap-3">
+              {[1, 2].map(i => (
+                <div key={i} className="relative overflow-hidden cursor-pointer group flex-1" onClick={() => setActiveGallery(i)}>
+                  <img src={galleryImages[i].src} alt={galleryImages[i].caption} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style={{ height: "204px" }} />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3" style={{ background: "linear-gradient(to top, rgba(13,30,18,0.7), transparent)" }}>
+                    <p className="font-golos text-xs text-white">{galleryImages[i].caption}</p>
                   </div>
                 </div>
-              </AnimSection>
+              ))}
+            </div>
+          </AnimSection>
+
+          {/* Ряд 2: четыре одинаковых */}
+          <AnimSection className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {galleryImages.slice(3).map((img, i) => (
+              <div
+                key={i}
+                className="relative overflow-hidden cursor-pointer group"
+                style={{ height: "220px" }}
+                onClick={() => setActiveGallery(i + 3)}
+              >
+                <img src={img.src} alt={img.caption} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3" style={{ background: "linear-gradient(to top, rgba(13,30,18,0.7), transparent)" }}>
+                  <p className="font-golos text-xs text-white">{img.caption}</p>
+                </div>
+              </div>
             ))}
-          </div>
+          </AnimSection>
         </div>
       </section>
 
