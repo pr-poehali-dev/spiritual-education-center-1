@@ -98,7 +98,7 @@ export function Ornament({ flip = false, opacity = 1 }: { flip?: boolean; opacit
   return (
     <div
       className="w-full pointer-events-none flex items-center justify-center overflow-hidden"
-      style={{ opacity, height: "80px" }}
+      style={{ opacity, height: "110px" }}
     >
       <img
         src={ORNAMENT_URL}
