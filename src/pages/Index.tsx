@@ -8,6 +8,8 @@ const galleryImages = [
   { src: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/d7648cab-f376-478f-b551-a09402c9de21.jpg", caption: "Занятие на улице" },
   { src: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/bc15a8b0-c472-4578-baa0-b4facd764c6c.jpg", caption: "Урок «Хлеб насущный»" },
   { src: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/a79a4738-2305-4454-b744-61e51404bcea.jpg", caption: "Паломничество" },
+  { src: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/d8f8dc6f-bf8f-47b8-8fc4-38509748628c.jpg", caption: "Экскурсия" },
+  { src: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/49d3264d-58fa-4bc8-bc70-37e90bcd6d42.jpg", caption: "Общая фотография прихода" },
 ];
 
 export default function Index() {
