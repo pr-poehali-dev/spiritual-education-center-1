@@ -20,7 +20,7 @@ export default function Sections({ onRegister, galleryImages, activeGallery, set
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-end pb-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={HERO_IMAGE} alt="Центр" className="w-full h-full object-cover" style={{ objectPosition: "center 20%", transform: "scale(1.1)", transformOrigin: "center 20%" }} />
+          <img src={HERO_IMAGE} alt="Центр" className="w-full h-full object-cover" style={{ objectPosition: "center 20%", transform: "scale(0.95)", transformOrigin: "center 20%" }} />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(13,30,18,0.88) 40%, rgba(13,30,18,0.35) 100%)" }} />
         </div>
         <div className="absolute top-1/3 right-16 hidden xl:block opacity-20">
