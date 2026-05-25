@@ -257,9 +257,9 @@ export default function Index() {
             />
           </a>
 
-          <nav className="hidden lg:flex items-center gap-5 flex-1 justify-center">
+          <nav className="hidden lg:flex items-center gap-4 flex-1 justify-center flex-nowrap">
             {NAV_ITEMS.map(item => (
-              <a key={item.href} href={item.href} className="nav-link">{item.label}</a>
+              <a key={item.href} href={item.href} className="nav-link whitespace-nowrap" style={{ fontSize: "0.7rem" }}>{item.label}</a>
             ))}
           </nav>
 
