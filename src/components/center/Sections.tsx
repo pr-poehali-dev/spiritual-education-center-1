@@ -28,12 +28,12 @@ export default function Sections({ onRegister, galleryImages, activeGallery, set
           <div className="w-3 h-3 rounded-full mx-auto -mt-1.5 -ml-1" style={{ backgroundColor: "var(--c-gold)" }} />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-12 w-full">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl pt-24 md:pt-0">
             <img
               src={LOGO_WHITE}
               alt="Логотип"
-              className="mb-8 object-contain logo-animate"
-              style={{ height: "200px", width: "auto", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.3))" }}
+              className="mb-8 object-contain logo-animate h-28 md:h-48 lg:h-[200px]"
+              style={{ width: "auto", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.3))" }}
             />
             <p className="font-golos text-xs tracking-widest uppercase mb-6 animate-fade-in" style={{ color: "var(--c-gold)", animationDelay: "0.2s", opacity: 0 }}>
               Духовно-просветительский центр
