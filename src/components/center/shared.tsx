@@ -6,7 +6,7 @@ export const L_HANDS   = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b7
 export const L_CIRCLES = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/48b4878a-4e9c-4f59-820d-2a4580fb175d.png";
 export const L_TEXT    = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/ecf7b6ca-0c71-4696-b19d-99d4ad9c12f0.png";
 export const HERO_IMAGE   = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/ca212f9c-0698-47c6-8045-5277242a3494.png";
-export const SCHOOL_IMAGE = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/734a3b55-2c21-474e-b164-bf7df959cf16.png";
+export const SCHOOL_IMAGE = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/cf8fbccd-859b-4119-87bf-a2763cef6b7b.jpg";
 export const ICON_IMAGE   = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/files/8adc616d-6f11-4735-bead-e32309f81ac4.jpg";
 export const ORNAMENT_URL = "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/fb22308e-ee49-42a2-9697-8f204206dc67.png";
 
