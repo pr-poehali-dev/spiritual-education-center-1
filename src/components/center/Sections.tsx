@@ -347,11 +347,15 @@ export default function Sections({ onRegister, galleryImages, activeGallery, set
             {TEACHERS.map(t => (
               <AnimSection key={t.name}>
                 <div className="bg-white rounded-sm card-hover flex flex-col overflow-hidden">
-                  <div className="relative flex items-center justify-center" style={{ height: "200px", backgroundColor: "var(--c-beige-dark)" }}>
-                    <div className="flex flex-col items-center gap-3 opacity-40">
-                      <Icon name="User" size={48} style={{ color: "var(--c-green-mid)" }} />
-                      <p className="font-golos text-xs" style={{ color: "var(--c-text-muted)" }}>Фото</p>
-                    </div>
+                  <div className="relative flex items-center justify-center overflow-hidden" style={{ height: "260px", backgroundColor: "var(--c-beige-dark)" }}>
+                    {t.photo ? (
+                      <img src={t.photo} alt={t.name} className="w-full h-full object-cover" style={{ objectPosition: "center top" }} />
+                    ) : (
+                      <div className="flex flex-col items-center gap-3 opacity-40">
+                        <Icon name="User" size={48} style={{ color: "var(--c-green-mid)" }} />
+                        <p className="font-golos text-xs" style={{ color: "var(--c-text-muted)" }}>Фото</p>
+                      </div>
+                    )}
                     <div className="absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: "var(--c-green-dark)" }}>
                       <Icon name={t.icon} size={14} style={{ color: "var(--c-gold)" }} fallback="BookOpen" />
                     </div>
