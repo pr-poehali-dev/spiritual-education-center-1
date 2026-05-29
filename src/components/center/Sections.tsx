@@ -450,6 +450,24 @@ export default function Sections({ onRegister, galleryImages, activeGallery, set
               ))}
             </div>
           </div>
+
+          <div className="mt-10 pt-8 flex flex-col items-center gap-4" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>
+            <p className="font-golos text-xs tracking-wider uppercase" style={{ color: "var(--c-gold)" }}>Храм Троицы Живоначальной</p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <a href="https://kadilo.info/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-sm transition-colors" style={{ border: "1px solid rgba(255,255,255,0.2)", color: "rgba(255,255,255,0.8)" }}>
+                <Icon name="Globe" size={16} style={{ color: "var(--c-gold)" }} />
+                <span className="font-golos text-xs">Сайт храма</span>
+              </a>
+              <a href="https://t.me/golenishevo" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-sm transition-colors" style={{ border: "1px solid rgba(255,255,255,0.2)", color: "rgba(255,255,255,0.8)" }}>
+                <Icon name="Send" size={16} style={{ color: "var(--c-gold)" }} />
+                <span className="font-golos text-xs">Telegram</span>
+              </a>
+              <a href="https://max.ru/join/b1wmnpYSJKw2R7TAtIAyGy2RJNDhe6XjVZf4S5ErKRg" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-sm transition-colors" style={{ border: "1px solid rgba(255,255,255,0.2)", color: "rgba(255,255,255,0.8)" }}>
+                <Icon name="MessagesSquare" size={16} style={{ color: "var(--c-gold)" }} />
+                <span className="font-golos text-xs">Канал MAX</span>
+              </a>
+            </div>
+          </div>
           <div className="mt-8 pt-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>
             <p className="font-golos text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>
               © 2025 Духовно-просветительский центр имени святителя Киприана
