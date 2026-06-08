@@ -27,13 +27,13 @@ export const TEACHERS = [
   { name: "Володин Лука Михайлович", role: "Педагог", subject: "Священное Писание. Новый Завет", icon: "BookOpen" },
   { name: "Копысов Дмитрий Александрович", role: "Педагог", subject: "Урок «Хлеб насущный»", icon: "Wheat", photo: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/027537ab-5454-4389-bad6-3af867da2931.jpg" },
   { name: "Наталья Васильевна Антонова", role: "Педагог", subject: "Закон Божий, урок «Хлеб насущный»", icon: "BookMarked", photo: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/5c9e22d2-b5d1-4ba7-8509-26fc6ada982f.jpg" },
-  { name: "Елена Викторовна Тросникова", role: "Педагог", subject: "Рассказы о святых", icon: "ScrollText" },
-  { name: "Людмила Павловна Медведьева", role: "Педагог", subject: "Язык православного богослужения", icon: "Church" },
-  { name: "Мария Анатольевна Пузина", role: "Педагог", subject: "Церковнославянский язык", icon: "Languages" },
-  { name: "Матрона Дмитровна Патрушева", role: "Педагог", subject: "Церковное пение", icon: "Music" },
+  { name: "Елена Викторовна Тросникова", role: "Педагог", subject: "Рассказы о святых", icon: "ScrollText", photo: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/b15079b1-64f5-43a8-83d1-bca2aa525a2d.jpg" },
+  { name: "Людмила Павловна Медведьева", role: "Педагог", subject: "Язык православного богослужения", icon: "Church", photo: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/7fc2009e-2ef9-45f0-8c2b-54bfc4f65b17.jpg" },
+  { name: "Мария Анатольевна Пузина", role: "Педагог", subject: "Церковнославянский язык", icon: "Languages", photo: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/ce2737a9-41da-4535-8840-aeabb8a8905c.jpg" },
+  { name: "Матрона Дмитровна Патрушева", role: "Педагог", subject: "Церковное пение", icon: "Music", photo: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/ff6598ec-a42f-4f58-9c7d-671af4972cd4.jpg" },
   { name: "Юлия Анатольевна Харитонова", role: "Педагог", subject: "Экскурсии и паломничество", icon: "MapPin", photo: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/287d387a-6cb2-47fa-9988-5fe0302e2231.jpg" },
   { name: "Илюхин Владимир", role: "Мастер", subject: "Столярная мастерская", icon: "Hammer", photo: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/99e80218-cb6c-42b5-968a-ebcc5f7aaf1e.jpg" },
-  { name: "Кибец Вероника Вадимовна", role: "Педагог", subject: "Живопись", icon: "Paintbrush" },
+  { name: "Кибец Вероника Вадимовна", role: "Педагог", subject: "Живопись", icon: "Paintbrush", photo: "https://cdn.poehali.dev/projects/0b1b6044-c174-4bad-b78b-1c48fd832b73/bucket/37eaa019-489d-4b52-8092-b459f5d4b48c.jpg" },
   { name: "Тряпицина Анна Андреевна", role: "Педагог", subject: "Швейное мастерство", icon: "Scissors" },
 ];
 
