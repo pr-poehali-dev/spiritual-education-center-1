@@ -349,7 +349,7 @@ export default function Sections({ onRegister, galleryImages, activeGallery, set
                 <div className="bg-white rounded-sm card-hover flex flex-col overflow-hidden">
                   <div className="relative flex items-center justify-center overflow-hidden" style={{ height: "260px", backgroundColor: "var(--c-beige-dark)" }}>
                     {t.photo ? (
-                      <img src={t.photo} alt={t.name} className="w-full h-full object-cover" style={{ objectPosition: "center top" }} />
+                      <img src={t.photo} alt={t.name} className="w-full h-full object-cover" style={{ objectPosition: t.photoPos || "center top" }} />
                     ) : (
                       <div className="flex flex-col items-center gap-3 opacity-40">
                         <Icon name="User" size={48} style={{ color: "var(--c-green-mid)" }} />
