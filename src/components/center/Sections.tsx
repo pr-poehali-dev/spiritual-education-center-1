@@ -1,4 +1,5 @@
 import Icon from "@/components/ui/icon";
+import FAQ from "./FAQ";
 import {
   AnimSection, Ornament,
   LOGO_WHITE,
@@ -373,6 +374,9 @@ export default function Sections({ onRegister, galleryImages, activeGallery, set
           </div>
         </div>
       </section>
+
+      {/* ── FAQ ── */}
+      <FAQ />
 
       {/* ── CTA ── */}
       <section className="py-24 relative overflow-hidden" style={{ backgroundColor: "var(--c-green-mid)" }}>

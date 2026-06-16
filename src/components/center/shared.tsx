@@ -19,6 +19,7 @@ export const NAV_ITEMS = [
   { label: "Галерея", href: "#gallery" },
   { label: "Педагоги", href: "#teachers" },
   { label: "Расписание", href: "#schedule" },
+  { label: "Вопросы", href: "#faq" },
   { label: "Контакты", href: "#contacts" },
 ];
 
